@@ -40,9 +40,6 @@ packages:
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
 extra-deps:
-- git: git@github.com:sullyj3/flow.git
-  commit: 13707dbf2522abe0a4ebc1b416d23aa7673585e1
-
 # Override default flag values for local packages and extra-deps
 # flags: {}
 

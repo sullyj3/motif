@@ -1,11 +1,10 @@
 {-# LANGUAGE NumericUnderscores #-}
 module Motif
     ( sleep
-    , module Flow
+    , count
     ) where
 
 import Control.Concurrent (threadDelay)
-import Flow
 import Data.Foldable
 
 sleep :: Double -> IO ()
