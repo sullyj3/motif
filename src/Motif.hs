@@ -15,3 +15,7 @@ count :: Foldable t => (a -> Bool) -> t a -> Int
 count p = foldl' go 0
   where go n x | p x = n+1
                | otherwise = n
+
+{-# specialise divides :: Int -> Int -> Bool #-}
+divides :: Integral a => a -> a -> Bool
+divides a b = b `mod` a == 0
