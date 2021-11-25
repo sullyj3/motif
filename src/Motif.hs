@@ -2,10 +2,11 @@
 module Motif
     ( sleep
     , count
+    , divides
     ) where
 
 import Control.Concurrent (threadDelay)
-import Data.Foldable
+import Data.Foldable ( Foldable(foldl') )
 
 sleep :: Double -> IO ()
 sleep seconds = threadDelay . round $ (seconds * 1_000_000)
