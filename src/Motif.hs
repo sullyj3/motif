@@ -1,9 +1,5 @@
 {-# LANGUAGE NumericUnderscores #-}
-module Motif
-    ( sleep
-    , count
-    , divides
-    ) where
+module Motif where
 
 import Control.Concurrent (threadDelay)
 import Data.Foldable ( Foldable(foldl') )
