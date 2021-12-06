@@ -17,6 +17,10 @@ count p = foldl' go 0
   where go n x | p x = n+1
                | otherwise = n
 
+{-# specialize replace :: Eq a => a -> a -> [a] -> [a] #-}
+replace :: (Eq a, Functor f) => a -> a -> f a -> f a
+replace a b = fmap (\x -> if x == a then b else x)
+
 {-# specialise divides :: Int -> Int -> Bool #-}
 divides :: Integral a => a -> a -> Bool
 divides a b = b `mod` a == 0
